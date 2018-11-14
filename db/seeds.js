@@ -4,49 +4,49 @@ const mongoose = require("./connections");
 
 const halo = new VideoGame({
   name: "Halo",
-  platform: "xbox",
-  year: 2001,
   image:
-    "https://http2.mlstatic.com/halo-combat-evolved-pc-juego-fisico-espanol-winmacsoft-D_NQ_NP_602173-MLA26030222889_092017-F.jpg"
+    "https://http2.mlstatic.com/halo-combat-evolved-pc-juego-fisico-espanol-winmacsoft-D_NQ_NP_602173-MLA26030222889_092017-F.jpg",
+  platform: "xbox",
+  year: 2001
 });
 
 const forza = new VideoGame({
   name: "Forza Horizon",
-  platform: "xbox",
-  year: 2012,
   image:
-    "https://upload.wikimedia.org/wikipedia/en/thumb/7/77/Forza_Horizon_boxart.jpg/220px-Forza_Horizon_boxart.jpg"
+    "https://upload.wikimedia.org/wikipedia/en/thumb/7/77/Forza_Horizon_boxart.jpg/220px-Forza_Horizon_boxart.jpg",
+  platform: "xbox",
+  year: 2012
 });
 
 const dead = new VideoGame({
   name: "DEADRISING 3",
-  platform: "xbox one",
-  year: 2013,
   image:
-    "https://lh6.ggpht.com/_PkRIOjQ7W64vN3eiayQcAyTBNB2MgylOMmiODCtKOKK-YCjANWn5e2K_EaQNJqA8AKIeCAW-I0zEsEnYK_qwTsWN2Id=s450"
+    "https://lh6.ggpht.com/_PkRIOjQ7W64vN3eiayQcAyTBNB2MgylOMmiODCtKOKK-YCjANWn5e2K_EaQNJqA8AKIeCAW-I0zEsEnYK_qwTsWN2Id=s450",
+  platform: "xbox one",
+  year: 2013
 });
 
 const destiny = new VideoGame({
   name: "Destiny",
-  platform: "ps4",
-  year: 2014,
   image:
-    "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Destiny_box_art.png/220px-Destiny_box_art.png"
+    "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Destiny_box_art.png/220px-Destiny_box_art.png",
+  platform: "ps4",
+  year: 2014
 });
 
 const witcher = new VideoGame({
   name: "The Witcher 3",
+  image: "https://cdn2.gracza.pl/gfx/logos/980x360/980_594070511.jpg",
   platform: "ps4",
-  year: 2015,
-  image: "https://cdn2.gracza.pl/gfx/logos/980x360/980_594070511.jpg"
+  year: 2015
 });
 
 const last = new VideoGame({
   name: "The Last Of Us",
-  platform: "ps4",
-  year: 2013,
   image:
-    "https://upload.wikimedia.org/wikipedia/tr/c/c5/The-last-of-us-cover.png"
+    "https://upload.wikimedia.org/wikipedia/tr/c/c5/The-last-of-us-cover.png",
+  platform: "ps4",
+  year: 2013
 });
 
 const anderson = new User({

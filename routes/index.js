@@ -9,4 +9,7 @@ router.get("/api/users/:userId", usersController.show);
 router.patch("/api/users/:userId", usersController.update);
 router.delete("/api/users/:userId", usersController.delete);
 
+
+router.get('/api/videogames', videoGamesController.index)
+
 module.exports = router;

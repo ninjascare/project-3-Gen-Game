@@ -66,7 +66,7 @@ const jose = new User({
 
 User.remove({})
   .then(() => VideoGame.remove({}))
-  .then(() => insertMany([halo, dead, forza, last, witcher, destiny]))
+  .then(() => VideoGame.insertMany([halo, dead, forza, last, witcher, destiny]))
   .then(() => anderson.save())
   .then(() => jose.save())
   .then(() => console.log("Successful Save"))

@@ -16,9 +16,16 @@ const usersController = {
       });
   },
   create: (req, res) => {
-    User.create(req.body)
-    .then(newUser => {
+    User.create(req.body).then(newUser => {
       res.send(newUser);
+    });
+  },
+  update: (req, res) => {
+    const userId = req.params.userId;
+    User.findByIdAndUpdate(userId, req.body)
+    .then(updatedUser => {
+      updatedUser.save();
+      res.send(updatedUser);
     });
   }
 };

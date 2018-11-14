@@ -16,7 +16,16 @@ const videoGamesController = {
       res.send(game);
     });
   },
-  
+  create: (req, res) => {
+    const userId = req.params.userId;
+    User.findById(userId).then(user => {
+      VideoGame.create(req.body).then(newGame => {
+        user.games.push(newGame);
+        user.save();
+        res.send(newGame);
+      });
+    });
+  }
 };
 
 module.exports = videoGamesController;

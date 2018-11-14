@@ -22,10 +22,15 @@ const usersController = {
   },
   update: (req, res) => {
     const userId = req.params.userId;
-    User.findByIdAndUpdate(userId, req.body)
-    .then(updatedUser => {
+    User.findByIdAndUpdate(userId, req.body).then(updatedUser => {
       updatedUser.save();
       res.send(updatedUser);
+    });
+  },
+  delete: (req, res) => {
+    const userId = req.params.userId;
+    User.findByIdAndRemove(userId).then(() => {
+      res.send(200);
     });
   }
 };

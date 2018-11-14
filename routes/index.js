@@ -7,6 +7,6 @@ router.get("/api/users", usersController.index);
 router.post("/api/users/", usersController.create);
 router.get("/api/users/:userId", usersController.show);
 router.patch("/api/users/:userId", usersController.update);
-// router.delete("/api/users/:userId", usersController.delete);
+router.delete("/api/users/:userId", usersController.delete);
 
 module.exports = router;

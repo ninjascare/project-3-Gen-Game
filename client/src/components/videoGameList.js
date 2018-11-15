@@ -2,34 +2,32 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-export default class VideoGamePage extends Component {
+export default class VideoGameList extends Component {
   state = {
-    user: {},
     games: []
   };
 
   componentDidMount() {
-    const userId = this.props.match.params.userId;
+    const userId = this.props.match.params.userId
     axios.get(`/api/users/${userId}/videogames`).then(res => {
-      console.log(res.data.games)
+      console.log(res.data);
       this.setState({
-        user: res.data,
-        games: res.data.games
+        games: res.data
       });
     });
   }
 
   render() {
+    const gameDetails = this.state.games.map(game => (
+      <Link key={game._id} to={`/videogames/${game._id}`}>
+        <h1>{game.name}</h1>
+      </Link>
+    ))
+
     return (
       <div>
-        <h1>Welcome to the {this.state.user.name}'s video game list </h1>
-        {this.state.games.map(game => (
-          <div key={game._id}>
-            <Link to={`/videogames/${game._id}`}>
-              <img src="{game.image}" />
-            </Link>
-          </div>
-        ))}
+        {/* <h1>Welcome to the {this.state.user.name}'s video game list </h1> */}
+        {gameDetails}
       </div>
     );
   }

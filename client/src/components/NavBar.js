@@ -7,7 +7,7 @@ export default class NavBar extends Component {
       <div>
         <h1>welcome to the nav bar</h1>
         <Link to='/'><button>Home</button> </Link> <br/>
-        <Link to='/api/users'><button>Users</button></Link>
+        <Link to='/users'><button>Users</button></Link>
         {/* <Link></Link> */}
       </div>
     )

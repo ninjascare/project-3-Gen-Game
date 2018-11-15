@@ -28,13 +28,19 @@ const videoGamesController = {
   },
   update: (req, res) => {
     const videogamesId = req.params.videogamesId;
-    VideoGame.findByIdAndUpdate(videogamesId, req.body, { new: true })
-    .then(
+    VideoGame.findByIdAndUpdate(videogamesId, req.body, { new: true }).then(
       updatedGame => {
         updatedGame.save();
         res.send(updatedGame);
       }
     );
+  },
+  delete: (req, res) => {
+    const videogamesId = req.params.videogamesId;
+    VideoGame.findByIdAndRemove(videogamesId)
+    .then(() => {
+      res.send(200);
+    });
   }
 };
 

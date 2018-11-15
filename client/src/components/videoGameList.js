@@ -18,8 +18,10 @@ export default class VideoGameList extends Component {
   }
 
   render() {
+    const userId = this.props.match.params.userId
     const gameDetails = this.state.games.map(game => (
-      <Link key={game._id} to={`/videogames/${game._id}`}>
+    
+      <Link key={game._id} to={`/users/${userId}/videogames/${game._id}`}>
         <h1>{game.name}</h1>
       </Link>
     ))

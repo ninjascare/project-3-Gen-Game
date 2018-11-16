@@ -26,7 +26,10 @@ export default class SingleUser extends Component {
 
         <hr />
         <VideoGameList {...this.props} />
+
         <hr/> <br/>
+        
+        <h3>Create New Game Choice</h3>
         <NewGameForm {...this.props} />
       </div>
     );

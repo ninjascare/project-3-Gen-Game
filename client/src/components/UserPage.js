@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import NewUserForm from "./NewUserForm";
-import NewGameForm from "./NewGameForm";
 
 export default class UserPage extends Component {
   state = {

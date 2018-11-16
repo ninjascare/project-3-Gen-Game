@@ -10,7 +10,7 @@ export default class VideoGameList extends Component {
   componentDidMount() {
     const userId = this.props.match.params.userId
     axios.get(`/api/users/${userId}/videogames`).then(res => {
-      console.log(res.data);
+      // console.log(res.data);
       this.setState({
         games: res.data
       });

@@ -31,7 +31,7 @@ export default class NewGameForm extends Component {
     axios.post(`/api/users/${userId}/videogames`, payload).then(res => {
       console.log(res.data);
       this.props.history.go(`/users/${userId}`);
-    });
+    }); 
   };
 
   render() {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import VideoGameList from "./videoGameList";
 import axios from "axios";
+import NewGameForm from "./NewGameForm";
 
 export default class SingleUser extends Component {
   state = {
@@ -25,6 +26,8 @@ export default class SingleUser extends Component {
 
         <hr />
         <VideoGameList {...this.props} />
+        <hr/> <br/>
+        <NewGameForm {...this.props} />
       </div>
     );
   }

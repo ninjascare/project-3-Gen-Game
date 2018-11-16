@@ -3,7 +3,6 @@ import axios from "axios";
 
 export default class NewUserForm extends Component {
   state = {
-    users: [],
     newUser: {
       name: "",
       image: "",

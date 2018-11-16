@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import NewUserForm from "./NewUserForm";
 
 export default class UserPage extends Component {
   state = {
@@ -26,6 +27,8 @@ export default class UserPage extends Component {
             <Link to={`/users/${user._id}`}><button>{user.name}</button></Link>
           </div>
         ))}
+        <br/> <hr/>
+        <NewUserForm {...this.props}/>
       </div>
     );
   }

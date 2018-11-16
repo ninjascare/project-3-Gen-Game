@@ -22,13 +22,13 @@ export default class VideoGameList extends Component {
     const gameDetails = this.state.games.map(game => (
     
       <Link key={game._id} to={`/users/${userId}/videogames/${game._id}`}>
-        <h1>{game.name}</h1>
+        <h3>{game.name}</h3>
       </Link>
     ))
 
     return (
       <div>
-        {/* <h1>Welcome to the {this.state.user.name}'s video game list </h1> */}
+        <h1>My Video Game List </h1>
         {gameDetails}
       </div>
     );

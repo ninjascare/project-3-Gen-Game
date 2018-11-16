@@ -6,9 +6,9 @@ export default class NavBar extends Component {
     return (
       <div>
         <h1>welcome to the nav bar</h1>
-        <Link to='/'><button>Home</button> </Link> <br/>
-        <Link to='/users'><button>Users</button></Link>
-        {/* <Link></Link> */}
+        <Link to='/'><button> Home </button> </Link>  
+        <br/>
+        <Link to='/users'><button> Users </button></Link>
       </div>
     )
   }

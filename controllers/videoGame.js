@@ -28,8 +28,8 @@ const videoGamesController = {
   },
   update: (req, res) => {
     const videogamesId = req.params.videogamesId;
-    VideoGame.findByIdAndUpdate(videogamesId, req.body, { new: true }).then(
-      updatedGame => {
+    VideoGame.findByIdAndUpdate(videogamesId, req.body, { new: true })
+      .then(updatedGame => {
         updatedGame.save();
         res.send(updatedGame);
       }

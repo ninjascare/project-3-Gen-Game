@@ -24,12 +24,13 @@ export default class UserPage extends Component {
         <h3>All Users:</h3>
         {this.state.users.map(user => (
           <div key={user._id}>
-            <Link to={`/users/${user._id}`}><button>{user.name}</button></Link>
+            <Link to={`/users/${user._id}`}>
+              <button>{user.name}</button>
+            </Link>
           </div>
         ))}
-        <br/> <hr/>
-        <NewUserForm {...this.props}/>
-       
+        <br /> <hr />
+        <NewUserForm {...this.props} />
       </div>
     );
   }

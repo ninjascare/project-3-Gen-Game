@@ -23,12 +23,10 @@ export default class SingleUser extends Component {
           Console of Preferences: <br />
           {this.state.user.console}
         </h3>
-
+        <button>Delete this user</button>
         <hr />
         <VideoGameList {...this.props} />
-
-        <hr/> <br/>
-        
+        <hr /> <br />
         <h3>Create New Game Choice</h3>
         <NewGameForm {...this.props} />
       </div>

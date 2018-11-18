@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import VideoGameList from "./videoGameList";
 import axios from "axios";
 import NewGameForm from "./NewGameForm";
+import DeleteUser from "./DeleteUser";
 
 export default class SingleUser extends Component {
   state = {
@@ -14,6 +15,15 @@ export default class SingleUser extends Component {
     });
   }
 
+  // handleDelete = userId => {
+  //   axios.delete(`/api/users/${userId}`).then(() => {
+  //     const filtered = this.state.user.filter(user => {
+  //       return user._id !== userId;
+  //     });
+  //     this.setState({ user: filtered });
+  //   });
+  // };
+
   render() {
     return (
       <div>
@@ -23,7 +33,7 @@ export default class SingleUser extends Component {
           Console of Preferences: <br />
           {this.state.user.console}
         </h3>
-        <button>Delete this user</button>
+        <DeleteUser {...this.props}/>
         <hr />
         <VideoGameList {...this.props} />
         <hr /> <br />

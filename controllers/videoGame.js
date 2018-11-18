@@ -37,7 +37,7 @@ const videoGamesController = {
   },
   delete: (req, res) => {
     const videogamesId = req.params.videogamesId;
-    VideoGame.findByIdAndRemove(videogamesId)
+    VideoGame.findByIdAndDelete(videogamesId)
     .then(() => {
       res.send(200);
     });

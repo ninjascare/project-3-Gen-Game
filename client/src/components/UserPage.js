@@ -17,6 +17,16 @@ export default class UserPage extends Component {
     this.getAllUsers();
   }
 
+  handleDelete = userId => {
+    axios.delete(`/api/users/${userId}`).then(() => {
+      const deletedUser = [...this.state.users]; 
+      const filtered = deletedUser.filter(user => {
+        return user._id !== userId;
+      });
+      this.setState({ users: filtered });
+    });
+  };
+
   render() {
     return (
       <div>
@@ -27,6 +37,9 @@ export default class UserPage extends Component {
             <Link to={`/users/${user._id}`}>
               <button>{user.name}</button>
             </Link>
+              <button onClick={() => this.handleDelete(user._id)}>
+                Delete this user
+              </button>
           </div>
         ))}
         <br /> <hr />

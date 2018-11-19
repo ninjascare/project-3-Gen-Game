@@ -2,6 +2,18 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import NewUserForm from "./NewUserForm";
+import styled from "styled-components";
+
+const PageStyle = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+
+`;
 
 export default class UserPage extends Component {
   state = {
@@ -19,7 +31,7 @@ export default class UserPage extends Component {
 
   handleDelete = userId => {
     axios.delete(`/api/users/${userId}`).then(() => {
-      const deletedUser = [...this.state.users]; 
+      const deletedUser = [...this.state.users];
       const filtered = deletedUser.filter(user => {
         return user._id !== userId;
       });
@@ -29,7 +41,7 @@ export default class UserPage extends Component {
 
   render() {
     return (
-      <div>
+      <PageStyle>
         <h1> welcome to the users page </h1>
         <h3>All Users:</h3>
         {this.state.users.map(user => (
@@ -37,14 +49,14 @@ export default class UserPage extends Component {
             <Link to={`/users/${user._id}`}>
               <button>{user.name}</button>
             </Link>
-              <button onClick={() => this.handleDelete(user._id)}>
-                Delete this user
-              </button>
+            <button onClick={() => this.handleDelete(user._id)}>
+              Delete this user
+            </button>
           </div>
         ))}
         <br /> <hr />
         <NewUserForm {...this.props} />
-      </div>
+      </PageStyle>
     );
   }
 }

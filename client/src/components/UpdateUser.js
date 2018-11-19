@@ -22,9 +22,7 @@ export default class UpdateUser extends Component {
   };
 
   handleUpdate = userId => {
-    const updatedUser = this.state.user.find(user => {
-      return user._id === userId;
-    });
+    const updatedUser = this.state.user
     axios.patch(`/api/users/${userId}`, updatedUser).then(() => {
       console.log("Updated User");
     });

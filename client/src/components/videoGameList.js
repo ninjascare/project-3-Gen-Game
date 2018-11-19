@@ -8,7 +8,7 @@ export default class VideoGameList extends Component {
   };
 
   componentDidMount() {
-    const userId = this.props.match.params.userId
+    const userId = this.props.match.params.userId;
     axios.get(`/api/users/${userId}/videogames`).then(res => {
       // console.log(res.data);
       this.setState({
@@ -17,14 +17,26 @@ export default class VideoGameList extends Component {
     });
   }
 
+  handleDelete = (videogamesId) => {
+    console.log("Delete call")
+    const userId = this.props.match.params.userId;
+    axios.delete(`/api/users/${userId}/videogames/${videogamesId}`).then(() => {
+      this.componentDidMount()
+    });
+  };
+
   render() {
-    const userId = this.props.match.params.userId
+    const userId = this.props.match.params.userId;
     const gameDetails = this.state.games.map(game => (
-    
-      <Link key={game._id} to={`/users/${userId}/videogames/${game._id}`}>
-        <h3>{game.name}</h3>
-      </Link>
-    ))
+      <div>
+        <Link key={game._id} to={`/users/${userId}/videogames/${game._id}`}>
+          <h3>{game.name}</h3>
+        </Link>
+        <button onClick={() => this.handleDelete(game._id)}>
+          Delete this game
+        </button>
+      </div>
+    ));
 
     return (
       <div>

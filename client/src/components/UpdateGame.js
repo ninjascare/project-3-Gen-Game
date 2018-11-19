@@ -72,7 +72,7 @@ export default class UpdateGame extends Component {
             />
           </div>
           
-          <button type="submit">Update Games</button>
+          <button type="submit">Update Game</button>
         </form>
       </div>
     );

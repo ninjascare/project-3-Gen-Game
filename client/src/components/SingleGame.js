@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import styled from 'styled-components'
+import UpdateGame from "./UpdateGame";
 
 const PageStyle = styled.div`
   display: flex;
@@ -52,6 +53,7 @@ export default class SingleGame extends Component {
           The year the game was released: <br />
         </h3>
         <p>{this.state.games.year}</p>
+        <UpdateGame {...this.props}/>
         </Back>
       </PageStyle>
     );

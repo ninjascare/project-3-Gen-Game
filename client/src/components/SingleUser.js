@@ -11,6 +11,10 @@ const PageStyle = styled.div`
   align-items: center;
   align-content: center;
   flex-direction: column;
+  background: #ABCDEF;
+  border-radius:12px;
+  padding: 12px;
+  margin:0px 90px;
 
 `;
 
@@ -28,6 +32,8 @@ export default class SingleUser extends Component {
   render() {
     return (
       <div>
+                <PageStyle>
+
         <h1>Welcome to {this.state.user.name}'s profile page</h1>
         <img src={this.state.user.image} alt="profile pic" />
         <h3>
@@ -38,12 +44,12 @@ export default class SingleUser extends Component {
         <h3>Update User</h3>
         <UpdateUser {...this.props} />
         <hr />
-        <PageStyle>
         <VideoGameList {...this.props} />
-        </PageStyle>
         <hr /> <br />
         <h3>Create New Game Choice</h3>
         <NewGameForm {...this.props} />
+        </PageStyle>
+
       </div>
     );
   }

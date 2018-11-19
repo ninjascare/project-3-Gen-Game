@@ -12,7 +12,7 @@ const Global = createGlobalStyle`
 body{
 margin: 0;
 padding: 0;
-background: url('https://image.shutterstock.com/z/stock-vector-gadget-icons-vector-seamless-pattern-hand-drawn-doodle-computer-game-items-video-games-background-554704168.jpg');
+background: url('https://img.freepik.com/free-vector/console-with-games-lettering-neon-sign-on-brick-background_1262-11854.jpg?size=338&ext=jpg');
 }
 `;
 

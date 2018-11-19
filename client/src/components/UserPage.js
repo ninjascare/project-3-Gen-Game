@@ -12,6 +12,7 @@ const PageStyle = styled.div`
   flex-direction: column;
   background: white;
   border-radius: 12px;
+  margin: 0px 80px 0px 80px;
 
 `;
 

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Carousel } from "react-materialize";
 import { Link } from "react-router-dom";
 
 const LetterBackground = styled.div`
@@ -28,19 +27,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <LetterBackground />
-        {/* <Carousel
-            options={{ duration: 300}}
-            options={{ fullWidth: true}}
-            options={{ indicators: true}}
-            options={{ dist: 500}}
-            options={{ pressed: trye}}
-            images={[
-              "https://media.giphy.com/media/tKmbgzyh1wviU/giphy.gif",
-              "https://media.giphy.com/media/d9QiBcfzg64Io/giphy.gif",
-              "https://i.gifer.com/2P91.gif",
-              "https://i.gifer.com/YFRH.gif"
-            ]}
-          /> */}
+    
         <Start>
           <Link to="/users">
             <img

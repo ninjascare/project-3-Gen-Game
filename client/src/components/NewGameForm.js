@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 const FormStyle = styled.div`
 color: black;
-
 `;
 
 export default class NewGameForm extends Component {
@@ -37,7 +36,7 @@ export default class NewGameForm extends Component {
     const userId = this.props.match.params.userId;
     axios.post(`/api/users/${userId}/videogames`, payload).then(res => {
       console.log(res.data);
-      this.props.history.go(`/users/${userId}`);
+      this.props.history.go(`/users`);
     }); 
   };
 

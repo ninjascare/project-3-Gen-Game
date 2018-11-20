@@ -5,7 +5,7 @@ const mongoose = require("./connections");
 const halo = new VideoGame({
   name: "Halo",
   image:
-    "https://http2.mlstatic.com/halo-combat-evolved-pc-juego-fisico-espanol-winmacsoft-D_NQ_NP_602173-MLA26030222889_092017-F.jpg",
+    "https://m.media-amazon.com/images/M/MV5BYzQwNWRlYTctNTcwZS00ZDUxLWI3YzctOGFjNWI5M2U5MDI0XkEyXkFqcGdeQXVyNjkzMjQ1NDQ@._V1_.jpg",
   platform: "xbox",
   year: 2001
 });

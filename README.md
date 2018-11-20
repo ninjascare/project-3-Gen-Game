@@ -20,9 +20,14 @@
 ### Visual Studio Code
 
 # WireFrame:
-
+![wireframe](./public/images/wireframe.jpg)
 
 # ERDs:
+![Homepage](./public/images/Homepage.jpg)
+![ListOfGAmes](./public/images/ListOfGames.jpg)
+![Login](./public/images/Login.jpg)
+![SingelGame](./public/images/SingleGAme.jpg)
+![Singleuser](./public/images/SingleUser.jpg)
 
 
 # Future Development:

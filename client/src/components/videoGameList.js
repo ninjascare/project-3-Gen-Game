@@ -3,20 +3,17 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { Card, Col, CardTitle } from "react-materialize";
 import styled from "styled-components";
-import {Button} from 'react-materialize'
-
+import { Button } from "react-materialize";
 
 const CardsStyling = styled.div`
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-
   img {
     height: 30vh;
     width: 20vw;
     margin: 0 auto;
-
   }
 `;
 
@@ -66,7 +63,10 @@ export default class VideoGameList extends Component {
             className="#80cbc4 teal lighten-3"
             textClassName="white-text"
             actions={[
-              <Button className='#ef5350 red lighten-1' onClick={() => this.handleDelete(game._id)}>
+              <Button
+                className="#ef5350 red lighten-1"
+                onClick={() => this.handleDelete(game._id)}
+              >
                 Delete this game
               </Button>
             ]}

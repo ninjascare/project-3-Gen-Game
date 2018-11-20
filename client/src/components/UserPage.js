@@ -13,7 +13,7 @@ const PageStyle = styled.div`
   align-items: center;
   align-content: center;
   flex-direction: column;
-  background: url('https://static.makeuseof.com/wp-content/uploads/2016/04/rainmeter_wallpaper.png');
+  background: url("https://static.makeuseof.com/wp-content/uploads/2016/04/rainmeter_wallpaper.png");
   border-radius: 100px;
   margin: 0px 80px 0px 80px;
 `;

@@ -15,7 +15,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <LetterBackground>
-          <h1>Welcome to GameLiker</h1>
+          <h1 className="red-text ">Welcome to Gen-Game</h1>
           <p>
             This is a app where game lovers can come and keep track of all the
             games they've ever played and loved.

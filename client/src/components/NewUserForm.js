@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {Button, Icon} from 'react-materialize'
 
 export default class NewUserForm extends Component {
   state = {
@@ -63,7 +64,7 @@ export default class NewUserForm extends Component {
               name="console"
             />
           </div>
-          <button type="submit">Create User</button>
+          <Button class="btn-floating btn-large waves-effect waves-light red" type="submit">Create User</Button>
         </form>
       </div>
     );

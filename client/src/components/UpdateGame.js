@@ -14,6 +14,7 @@ export default class UpdateGame extends Component {
       this.setState({ games: res.data });
     });
   }
+  
   handleChange = e => {
     console.log("name", e.target.name);
     console.log("value", e.target.value);
@@ -21,6 +22,7 @@ export default class UpdateGame extends Component {
     updatedGame[e.target.name] = e.target.value;
     this.setState({ games: updatedGame });
   };
+
   handleUpdate = videoGamesId => {
     const updatedGame = this.state.games;
     const userId = this.props.match.params.userId;

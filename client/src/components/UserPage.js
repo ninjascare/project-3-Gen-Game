@@ -3,10 +3,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import NewUserForm from "./NewUserForm";
 import styled from "styled-components";
+import {Button, Icon } from "react-materialize";
+
 
 const PageStyle = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   flex-direction: column;
@@ -48,12 +50,13 @@ export default class UserPage extends Component {
         {this.state.users.map(user => (
           <div key={user._id}>
             <Link to={`/users/${user._id}`}>
-              <button>{user.name}</button>
-            </Link>
-            <button onClick={() => this.handleDelete(user._id)}>
+            <Button className='#42a5f5 blue lighten-1 z-depth-5' waves='light'><Icon left>touch_app</Icon>{user.name}</Button>
+            </Link> <br/>
+            <Button className='#ef5350 red lighten-1 z-depth-5' onClick={() => this.handleDelete(user._id)}>
               Delete this user
-            </button>
-          </div>
+            </Button>
+            <br/>
+          </div> 
         ))}
         <br /> <hr />
         <NewUserForm {...this.props} />

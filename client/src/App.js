@@ -38,6 +38,7 @@ class App extends Component {
                 component={SingleGame}
               />
               <Route path="/" component={HomePage} />
+              <Route component={HomePage} />
             </Switch>
           </div>
         </Router>

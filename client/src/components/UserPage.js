@@ -3,19 +3,19 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import NewUserForm from "./NewUserForm";
 import styled from "styled-components";
-import {Button, Icon } from "react-materialize";
-
+import { Button, Icon } from "react-materialize";
 
 const PageStyle = styled.div`
+  font-family: "Merriweather", serif;
+  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
   flex-direction: column;
-  background: white;
-  border-radius: 12px;
+  background: url('https://static.makeuseof.com/wp-content/uploads/2016/04/rainmeter_wallpaper.png');
+  border-radius: 100px;
   margin: 0px 80px 0px 80px;
-
 `;
 
 export default class UserPage extends Component {
@@ -50,13 +50,23 @@ export default class UserPage extends Component {
         {this.state.users.map(user => (
           <div key={user._id}>
             <Link to={`/users/${user._id}`}>
-            <Button className='#42a5f5 blue lighten-1 z-depth-5' waves='light'><Icon left>touch_app</Icon>{user.name}</Button>
-            </Link> <br/>
-            <Button className='#ef5350 red lighten-1 z-depth-5' onClick={() => this.handleDelete(user._id)}>
+              <Button
+                className="#42a5f5 blue lighten-1 z-depth-5"
+                waves="light"
+              >
+                <Icon left>touch_app</Icon>
+                {user.name}
+              </Button>
+            </Link>
+            <br />
+            <Button
+              className="#ef5350 red lighten-1 z-depth-5"
+              onClick={() => this.handleDelete(user._id)}
+            >
               Delete this user
             </Button>
-            <br/>
-          </div> 
+            <br />
+          </div>
         ))}
         <br /> <hr />
         <NewUserForm {...this.props} />

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {Button} from 'react-materialize'
+
 
 export default class UpdateUser extends Component {
   state = {
@@ -59,7 +61,7 @@ export default class UpdateUser extends Component {
               name="console"
             />
           </div>
-          <button type="submit">Update User</button>
+          <Button className='#1976d2 blue darken-2' type="submit">Update User</Button>
         </form>
       </div>
     );

@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import UpdateGame from "./UpdateGame";
+import {Button} from 'react-materialize'
+
 
 const PageStyle = styled.div`
+  font-family: "EB Garamond", serif;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -12,28 +15,30 @@ const PageStyle = styled.div`
 `;
 
 const Leteter = styled.div`
-  background: #ABCDEF;
-  border-radius: 12px;
+  font-family: "EB Garamond", serif;
+  color: #f57c00 ;
+  font-weight: bolder;
+  background: url('http://2.bp.blogspot.com/-MRwYeTOVaw0/VZ3IlIoQpyI/AAAAAAAAIr8/Wetii_b7KWs/s1600/flying%2Bthrough%2Bthe%2Bvoid.gif');
+  border-radius: 20px;
   margin: 0px 80px 0px 80px;
-
 `;
 
 const Back = styled.div`
-  background: #ABCDEF;
+  font-family: "EB Garamond", serif;
+  background: #abcdef;
   border-radius: 12px;
   margin: 0px 80px 0px 80px;
-
 `;
 const Form = styled.div`
+  font-family: "EB Garamond", serif;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
   flex-direction: column;
-  background: #ABCDEF;
+  background: #abcdef;
   border-radius: 12px;
   margin: 0px 100px 0px 100px;
-
 `;
 
 export default class SingleGame extends Component {
@@ -70,7 +75,7 @@ export default class SingleGame extends Component {
         </PageStyle>
         <Form>
           <h3>Update game:</h3>
-        <UpdateGame {...this.props} />
+          <UpdateGame {...this.props} />
         </Form>
       </div>
     );

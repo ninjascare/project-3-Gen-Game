@@ -4,14 +4,17 @@ import axios from "axios";
 import NewGameForm from "./NewGameForm";
 import UpdateUser from "./UpdateUser";
 import styled from "styled-components";
+import {Button} from 'react-materialize'
 
 const PageStyle = styled.div`
+  font-family: "Cabin", sans-serif;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
   flex-direction: column;
-  background: #abcdef;
+  background: url("http://static.tumblr.com/e60b248ae9bd68cb888034e7bb7d3b2f/o0cmdl5/qf7ndgrdb/tumblr_static_7yzz7mm0sz4sk4swok00cko4w.png");
   border-radius: 12px;
   padding: 12px;
   margin: 0px 90px;
@@ -38,7 +41,7 @@ export default class SingleUser extends Component {
             Console of Preferences: <br />
             {this.state.user.console}
           </h3>
-          <hr /> 
+          <hr />
           <h3>Update User</h3>
           <UpdateUser {...this.props} />
           <hr />

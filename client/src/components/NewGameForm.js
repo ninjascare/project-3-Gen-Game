@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {Button} from 'react-materialize'
+import styled from 'styled-components'
+
+const FormStyle = styled.div`
+color: black;
+
+`;
 
 export default class NewGameForm extends Component {
   state = {
@@ -37,6 +44,7 @@ export default class NewGameForm extends Component {
   render() {
     return (
       <div>
+        <FormStyle>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="name">Name:</label>
@@ -72,8 +80,9 @@ export default class NewGameForm extends Component {
               name="year"
             />
           </div>
-          <button type="submit">Create New Game</button>
+          <Button className='#7c4dff deep-purple accent-2' type="submit">Create New Game</Button>
         </form>
+          </FormStyle>
       </div>
     );
   }

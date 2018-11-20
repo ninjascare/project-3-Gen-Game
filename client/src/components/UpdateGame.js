@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {Button} from 'react-materialize'
+
+
 
 export default class UpdateGame extends Component {
   state = {
@@ -14,7 +17,7 @@ export default class UpdateGame extends Component {
       this.setState({ games: res.data });
     });
   }
-  
+
   handleChange = e => {
     console.log("name", e.target.name);
     console.log("value", e.target.value);
@@ -74,7 +77,7 @@ export default class UpdateGame extends Component {
             />
           </div>
           
-          <button type="submit">Update Game</button>
+          <Button className='#880e4f pink darken-4' type="submit">Update Game</Button>
         </form>
       </div>
     );

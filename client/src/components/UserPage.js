@@ -18,6 +18,20 @@ const PageStyle = styled.div`
   margin: 0px 80px 0px 80px;
 `;
 
+const ButtonStyle = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  flex-flow: row wrap;
+  flex-direction: row;
+`;
+
+const IndButton = styled.div`
+margin: 12px 0px;
+`;
+
 export default class UserPage extends Component {
   state = {
     users: []
@@ -47,27 +61,29 @@ export default class UserPage extends Component {
       <PageStyle>
         <h1> welcome to the users page </h1>
         <h3>All Users:</h3>
-        {this.state.users.map(user => (
-          <div key={user._id}>
-            <Link to={`/users/${user._id}`}>
+        <ButtonStyle>
+          {this.state.users.map(user => (
+            <IndButton key={user._id}>
+              <Link to={`/users/${user._id}`}>
+                <Button
+                  className="#42a5f5 blue lighten-1 z-depth-5"
+                  waves="light"
+                >
+                  <Icon left>touch_app</Icon>
+                  {user.name}
+                </Button>
+              </Link>
+              <br />
               <Button
-                className="#42a5f5 blue lighten-1 z-depth-5"
-                waves="light"
+                className="#ef5350 red lighten-1 z-depth-5"
+                onClick={() => this.handleDelete(user._id)}
               >
-                <Icon left>touch_app</Icon>
-                {user.name}
+                Delete this user
               </Button>
-            </Link>
-            <br />
-            <Button
-              className="#ef5350 red lighten-1 z-depth-5"
-              onClick={() => this.handleDelete(user._id)}
-            >
-              Delete this user
-            </Button>
-            <br />
-          </div>
-        ))}
+              <br />
+            </IndButton>
+          ))}
+        </ButtonStyle>
         <br /> <hr />
         <NewUserForm {...this.props} />
       </PageStyle>

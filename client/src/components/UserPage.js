@@ -29,7 +29,7 @@ const ButtonStyle = styled.div`
 `;
 
 const IndButton = styled.div`
-margin: 12px 0px;
+  margin: 12px 0px;
 `;
 
 export default class UserPage extends Component {

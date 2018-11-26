@@ -30,11 +30,12 @@
 
 ### Visual Studio Code
 
-# WireFrame:
+
+# ERDs:
 
 ![wireframe](./public/images/wireframe.jpg)
 
-# ERDs:
+# WireFrame:
 
 ![Homepage](./public/images/Homepage.jpg)
 ![ListOfGAmes](./public/images/ListOfGames.jpg)
